@@ -1,0 +1,23 @@
+
+
+// Core variables and mixins
+@import "sub-stylesheet/_variables";
+@import "sub-stylesheet/_mixins";
+
+
+
+// Core CSS
+@import "sub-stylesheet/_global";
+@import "sub-stylesheet/_header";
+@import "sub-stylesheet/_banner";
+@import "sub-stylesheet/_main";
+
+//bootstrap css
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+//swiper css
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/swiper-vars.scss";
+// font awsome css 
+@import "../fontawesome-pro-5.11.2/fontawesome-pro-5.11.2-web/scss/fontawesome.scss";
+
+// Components

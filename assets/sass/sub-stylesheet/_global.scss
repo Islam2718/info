@@ -1,0 +1,217 @@
+/*!
+<----------------------------------------
+  Theme Name: Habib's Team
+  Theme URI: https://mostafizurrahman533.github.io/avon/
+  Author: takaden.com
+  Author URI: http://takaden.com
+  Description: Avon is a Creative HTML5 Template with Saas, Startup & any ytpe of confarence.
+  Version: 1.0.0
+  Tags: app, Avon landing page, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
+---------------------------------------->
+*/
+/*
+>>> TABLE OF CONTENTS:
+<----------------------------------------------------------------
+  01. Default CSS
+  02. Global css
+  03. Header
+  04. sidebar menu
+  05. About
+  07. Roadmap
+  08. News
+  09. Team
+  10. Contact
+---------------------------------------------------------------->
+
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif !important;
+    background-color: $background-color !important;
+    font-weight: 400 !important;
+    section {
+        transition: all 0.5s ease-in-out;
+    }
+}
+body.overflow{
+  overflow: hidden;
+  @include breakpoint (lg) {
+    overflow: visible;
+  }
+}
+body.scroll-lock{
+  overflow: hidden;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+// animation css
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(7,197,208, 0.2);
+  }
+  70% {
+      box-shadow: 0 0 0 30px rgba(7,197,208, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(7,197,208, 0);
+  }
+}
+//? all social media
+
+.modal {
+  background-color: #00caca1c;
+  .modal-dialog{
+    .modal-content{
+      border: 0px solid rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      .modal-header{
+        border-bottom: none;
+        .modal-title{
+          font-size: 28px;
+          font-weight: 700;
+          color: $theme-color;
+        }
+        .btn-close{
+          color: $theme-color !important;
+          
+        }
+      }
+      .modal-body{
+        .popup-portfolio-area{
+          width: 100%;
+          margin: 0 auto;
+          transition: all 0.2s ease-in-out;
+          transition-duration:  0.2s;
+          transition-duration: 0.2s;
+          .popup-area{
+              margin: 0px 0px 0 0;
+              .close{
+                  text-align: right;
+                  cursor: pointer;
+                  position: absolute;
+                  right: 20px;
+                  span{
+                      padding: 10px 14px;
+                      border-radius: 50%;
+                      background-color: $theme-color;
+                      color: white;
+                  }
+              }
+          }
+          .projects-collapse{
+              .collaps-button{
+                  cursor: pointer;
+                  background-color: $theme-color;
+                  padding: 10px;
+                  color: white;
+                  border-radius: 5px;
+                  &.rotade{
+                      &::before{
+                          content: "";
+                          transition: all 0.2s ease-in-out;
+                          height: 15px;
+                          width: 15px;
+                          border-top: 2px solid white;
+                          border-right: 2px solid white;
+                          position: absolute;
+                          right: 35px;
+                          transform: rotate(135deg);
+                          margin: 5px;
+                      }
+                  }
+                  &::before{
+                      content: "";
+                      transition: all 0.2s ease-in-out;
+                      height: 15px;
+                      width: 15px;
+                      border-top: 2px solid white;
+                      border-right: 2px solid white;
+                      position: absolute;
+                      right: 35px;
+                      transform: rotate(45deg);
+                      margin: 5px;
+                  }
+              }
+              
+              .project-attribute{
+                  transform: scaleY(0);
+                  transform-origin: top;
+                  transition-duration:  0.2s;
+                  height: 0px;
+                  &.open{
+                      height: auto;
+                      transform: scaleY(1);
+                      background-color: $theme-color;
+                      padding: 20px;
+                      border-radius: 15px;
+                      margin: 0 0 20px 0;
+                  }
+                  .project-title{
+                      h5{
+                          font-size: 28px;
+                          font-weight: 600;
+                          color: white;
+                      }
+                  }
+                  .project-feature{
+                      display: flex;
+                      P{
+                          font-weight: 600;
+                      }
+                      ul{
+                          li{
+                              color: white;
+                          }
+                      }
+                  }
+                  .project-tech-languages{
+                      P{
+                          font-weight: 600;
+                          span{
+                              font-weight: 400;
+                              color: white;
+                          }
+                      }
+                  }
+                  .project-bio{
+                      p{
+                          color: white;
+                          strong{
+                              color: black;
+                          }
+                      }
+                  }
+              }
+          }
+          .project-popup-image{
+              text-align: center;
+              img{
+                  margin: 20px 0 30px  0;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

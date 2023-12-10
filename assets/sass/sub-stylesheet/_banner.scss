@@ -1,0 +1,134 @@
+
+//*===== banner area start ====*//
+.banner-area{
+    margin: 50px 0;
+    .itro-area{
+        position: relative;
+        height: 100%;
+        .background-images{
+            margin: 0 0;
+        img{
+            position: absolute;
+            z-index: -1;
+            &:nth-child(01){
+                top: 20px;
+                left: 75px;
+            }
+            &:nth-child(02){
+                bottom: 20px;
+                left: 0px;
+            }
+            &:nth-child(03){
+                top: 14%;
+                right: 0px;
+            }
+            &:nth-child(04){
+                bottom: 20%;
+                right: 20px;
+            }
+        }
+        }
+        .intro-content-area{
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .content-area{
+                width: 85%;
+                .section-sub-header{
+                    font-weight: 400;
+                    color: $title-color;
+                    h6{
+                        font-size: 20px;
+                        margin: 0 0 10px 0;
+                    }
+                }
+                .section-header{
+                    font-style: normal;
+                    font-weight: 700;
+                    color: $title-color;
+                    h2{
+                        font-size: 28px;
+                        margin: 0 0 10px 0;
+                        font-weight: 700;
+                    }
+                }
+                .banner-sub-title{
+                    font-style: normal;
+                    h5{
+                        color: $theme-color;
+                        font-size: 22px;
+                    }
+                }
+                .banner-address-area{
+                    margin-top: 30px;
+                    .d-flex{
+                        margin: 4px 0;
+                        a{
+                            text-decoration: none;
+                        }
+                        p{
+                            margin: 0 0 0 15px;
+                            padding: 0;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $desc-color;
+                        }
+                    }
+                    
+                }
+                .banner-social-link-area{
+                    margin: 20px 0;
+                    a{
+                        background-position: center;
+                        transition: all 0.3s ease-in-out;
+                        margin: 0  10px 0 0px;
+                        border: 1px solid $desc-color;
+                        border-radius: 50%;
+                        text-decoration: none;
+                        box-shadow: (0px 7px 17px rgba(65, 193, 193, 0.3));
+                        
+                        &:nth-child(01){
+                            padding: 13px 19px 12px 19px;
+                            svg{
+                                font-size: 25px;
+                                color: #056FE5;
+                            }
+                        }
+                        &:nth-child(02){
+                            padding: 13px 16px 12px 16px;
+                            svg{
+                                font-size: 25px;
+                                color: #0073B1;
+                            }
+                        }
+                        &:nth-child(03){
+                                padding: 14px 15px 11px 15px;
+                            svg{
+                                font-size: 25px;
+                                color: #202020;
+                            }
+                        }
+                        &:nth-child(04){
+                                padding: 14px 15px 11px 15px;
+                            svg{
+                                font-size: 25px;
+                                color: #CE2E6C;
+                            }
+                        }
+                        &:hover{
+                            box-shadow: (0px 7px 17px rgba(206, 46, 108, 0.25));
+                            background: radial-gradient(circle, transparent 1%, #00caca2a 1%) center/15000%;
+                        }
+                        &:active {
+                            background-size: 100%;
+                            transition: background 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

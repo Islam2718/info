@@ -1,0 +1,494 @@
+//*======= header css start =====*//
+header{
+    transition: all 0.2s ease-in-out; 
+    &.hide{
+        transform: scaleY(0);
+        transform-origin: top;
+        height: 0px;
+        width: 100%;
+        transition-duration: 0.2s;
+        transition: all 0.2s ease-in-out;
+        .menu-are{
+            .menu-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .menu-logo{
+                    a{
+                        font-family: 'Sail', cursive;
+                        font-size: 30px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        text-decoration: none;
+                        color: $theme-color;
+                    }
+                }
+                    .overlay {
+                        width: 100vw;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        left: 100vw;
+                        display: none;
+                        animation: fadeEffect 1s; 
+                        background: #00caca1f;
+                        transition: all 0.3s ease-in-out;
+                        z-index: 3;
+                        &.active {
+                            left: 0;
+                            display: block;
+                            @include breakpoint (lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                .menu-list{
+    
+                    display: flex;
+                    justify-content: space-between;
+                    nav{
+                       display: inline-flex;
+                       justify-content: space-around;
+                       align-items: center;
+                      
+                      .mobile-bar{
+                          padding: 20px 10px;
+                          cursor: pointer;
+                      }
+                      ul.close{
+                          left: 0;
+                          z-index: 99;
+                        @include breakpoint(lg){
+                          transform-origin: right;
+                          transform: scaleX(0);
+                        }
+                      }
+                        ul{
+                            transition: all 0.3s ease-in-out;
+                            padding: 0;
+                            margin: 0;
+                            display: inline-block;
+                            left: -300px;
+                            top: 0;
+                            width: 300px;
+                            height: 100vh;
+                            z-index: 15;
+                            background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                            text-align: center;
+                            position: absolute;
+                            li{
+                                height: 50px;
+                                line-height: 50px;
+                                list-style: none;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            @include breakpoint (max-mobile){
+                                transition: all 0.3s ease-in-out;
+                                padding: 0;
+                                margin: 0;
+                                display: inline-block;
+                                left: -270px;
+                                top: 0;
+                                width: 270px;
+                                height: 100vh;
+                                z-index: 5;
+                                background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                                text-align: center;
+                                position: absolute;
+                                li{
+                                    height: 50px;
+                                    line-height: 50px;
+                                    list-style: none;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+                            @include breakpoint(lg){
+                                transform: scaleX(1);
+                                background-image: none;
+                                width: 100%;
+                                transform-origin: right;
+                                left: 0;
+                                height: auto;
+                                position: relative;
+                                display: inline-flex;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                
+                                li{
+                                    list-style: none;
+                                    padding: 35px 20px;
+                                    top: 0;
+                                    height: 0px;
+                                    line-height: 0px;
+                                    a{
+                                        text-decoration: none;
+                                        text-transform: capitalize;
+                                        color: $theme-color;
+                                        transition: all 0.3s ease-in-out;
+                                        font-family: "Roboto";
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        &:hover{
+                                            color: $theme-color-two;
+                                        }
+                                    }
+                                }                                   
+                            }                       
+                        }
+                        .social-icon{
+                            display: none;
+                            @include breakpoint (lg){
+                                display: flex;
+                                a{
+                                    padding: 20px 5px;
+                                }
+                            }
+                        }
+                                            
+                    }              
+                }
+            }        
+        }
+    }
+    &.fixed{
+        transform: scaleY(1);
+        transform-origin: top;
+        transition-duration: 0.2s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: auto;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 15px 0px #00000038;
+        z-index: 99;
+        .menu-are{
+            .menu-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .menu-logo{
+                    a{
+                        font-family: 'Sail', cursive;
+                        font-size: 30px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        text-decoration: none;
+                        color: $theme-color;
+                    }
+                }
+                    .overlay {
+                        width: 100vw;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        left: 100vw;
+                        display: none;
+                        animation: fadeEffect 1s; 
+                        background: #00caca1f;
+                        transition: all 0.3s ease-in-out;
+                        z-index: 3;
+                        &.active {
+                            left: 0;
+                            display: block;
+                            @include breakpoint (lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                .menu-list{
+    
+                    display: flex;
+                    justify-content: space-between;
+                    nav{
+                       display: inline-flex;
+                       justify-content: space-around;
+                       align-items: center;
+                      
+                      .mobile-bar{
+                          padding: 20px 10px;
+                          cursor: pointer;
+                      }
+                      ul.close{
+                          left: 0;
+                          z-index: 99;
+                        @include breakpoint(lg){
+                          transform-origin: right;
+                          transform: scaleX(0);
+                        }
+                      }
+                        ul{
+                            transition: all 0.3s ease-in-out;
+                            padding: 0;
+                            margin: 0;
+                            display: inline-block;
+                            left: -300px;
+                            top: 0;
+                            width: 300px;
+                            height: 100vh;
+                            z-index: 15;
+                            background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                            text-align: center;
+                            position: absolute;
+                            li{
+                                height: 50px;
+                                line-height: 50px;
+                                list-style: none;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            @include breakpoint (max-mobile){
+                                transition: all 0.3s ease-in-out;
+                                padding: 0;
+                                margin: 0;
+                                display: inline-block;
+                                left: -270px;
+                                top: 0;
+                                width: 270px;
+                                height: 100vh;
+                                z-index: 5;
+                                background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                                text-align: center;
+                                position: absolute;
+                                li{
+                                    height: 50px;
+                                    line-height: 50px;
+                                    list-style: none;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+                            @include breakpoint(lg){
+                                transform: scaleX(1);
+                                background-image: none;
+                                width: 100%;
+                                transform-origin: right;
+                                left: 0;
+                                height: auto;
+                                position: relative;
+                                display: inline-flex;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                
+                                li{
+                                    list-style: none;
+                                    padding: 35px 20px;
+                                    top: 0;
+                                    height: 0px;
+                                    line-height: 0px;
+                                    a{
+                                        text-decoration: none;
+                                        text-transform: capitalize;
+                                        color: $theme-color;
+                                        transition: all 0.3s ease-in-out;
+                                        font-family: "Roboto";
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        &:hover{
+                                            color: $theme-color-two;
+                                        }
+                                    }
+                                }                                   
+                            }                       
+                        }
+                        .social-icon{
+                            display: none;
+                            @include breakpoint (lg){
+                                display: flex;
+                                a{
+                                    padding: 20px 5px;
+                                }
+                            }
+                        }
+                                            
+                    }              
+                }
+            }        
+        }
+    }
+    &.show{
+        background-color: #00d1a017;
+        height: auto;
+        position: relative;
+        transition-duration: 0.2s;
+        transition: all 0.2s ease-in-out;
+        .menu-are{
+            .menu-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .menu-logo{
+                    a{
+                        font-family: 'Sail', cursive;
+                        font-size: 30px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        text-decoration: none;
+                        color: $theme-color;
+                    }
+                }
+                    .overlay {
+                        width: 100vw;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        left: 100vw;
+                        display: none;
+                        animation: fadeEffect 1s; 
+                        background: #00caca1f;
+                        transition: all 0.3s ease-in-out;
+                        z-index: 3;
+                        &.active {
+                            left: 0;
+                            display: block;
+                            @include breakpoint (lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                .menu-list{
+    
+                    display: flex;
+                    justify-content: space-between;
+                    nav{
+                       display: inline-flex;
+                       justify-content: space-around;
+                       align-items: center;
+                      
+                      .mobile-bar{
+                          padding: 20px 10px;
+                          cursor: pointer;
+                      }
+                      ul.close{
+                          left: 0;
+                          z-index: 99;
+                        @include breakpoint(lg){
+                          transform-origin: right;
+                          transform: scaleX(0);
+                        }
+                      }
+                        ul{
+                            transition: all 0.3s ease-in-out;
+                            padding: 0;
+                            margin: 0;
+                            display: inline-block;
+                            left: -300px;
+                            top: 0;
+                            width: 300px;
+                            height: 100vh;
+                            z-index: 15;
+                            background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                            text-align: center;
+                            position: absolute;
+                            li{
+                                height: 50px;
+                                line-height: 50px;
+                                list-style: none;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            @include breakpoint (max-mobile){
+                                transition: all 0.3s ease-in-out;
+                                padding: 0;
+                                margin: 0;
+                                display: inline-block;
+                                left: -270px;
+                                top: 0;
+                                width: 270px;
+                                height: 100vh;
+                                z-index: 5;
+                                background-image: linear-gradient(to right, #00d1a0, #00CACA);
+                                text-align: center;
+                                position: absolute;
+                                li{
+                                    height: 50px;
+                                    line-height: 50px;
+                                    list-style: none;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+                            @include breakpoint(lg){
+                                transform: scaleX(1);
+                                background-image: none;
+                                width: 100%;
+                                transform-origin: right;
+                                left: 0;
+                                height: auto;
+                                position: relative;
+                                display: inline-flex;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                
+                                li{
+                                    list-style: none;
+                                    padding: 35px 20px;
+                                    top: 0;
+                                    height: 0px;
+                                    line-height: 0px;
+                                    a{
+                                        text-decoration: none;
+                                        text-transform: capitalize;
+                                        color: $theme-color;
+                                        transition: all 0.3s ease-in-out;
+                                        font-family: "Roboto";
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        &:hover{
+                                            color: $theme-color-two;
+                                        }
+                                    }
+                                }                                   
+                            }                       
+                        }
+                        .social-icon{
+                            display: none;
+                            @include breakpoint (lg){
+                                display: flex;
+                                a{
+                                    padding: 20px 5px;
+                                }
+                            }
+                        }
+                                            
+                    }              
+                }
+            }        
+        }
+    }
+}
+//*======= header css ends  =====*//
