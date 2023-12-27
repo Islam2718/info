@@ -729,7 +729,7 @@ header.show .menu-are .menu-bar {
 }
 
 header.show .menu-are .menu-bar .menu-logo a {
-  /* font-family: 'Sail', cursive; */
+  font-family: 'Sail', cursive;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0em;
